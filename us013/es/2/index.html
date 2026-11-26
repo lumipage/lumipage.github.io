@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#E8EDE7">
+<link rel="icon" href="data:,">
+<title>New York, USA</title>
+<link rel="stylesheet" href="../../app.css?v=e27ee6a1">
+</head>
+<body data-page="dest" data-n="2">
+<main class="wrap">
+  <nav class="tabs">
+    <a href="../" data-t="tabSudoku"></a>
+    <a href="../#timer" data-t="tabTimer"></a>
+    <a href="../passport/" data-t="tabPassport"></a>
+  </nav>
+
+  <section class="visa">
+    <p class="of" id="d-of"></p>
+    <h1 id="d-name"></h1>
+    <div class="stamp small"><span class="lvl" id="d-level"></span></div>
+  </section>
+
+  <button type="button" class="play" id="d-play" aria-pressed="false">
+    <span class="icon" aria-hidden="true"></span><span id="d-play-label"></span>
+  </button>
+  <label class="vol"><span data-t="volume"></span><input type="range" id="d-vol" min="0" max="1" step="0.05" value="0.8"></label>
+  <p class="hear"><strong data-t="youHear"></strong> <span id="d-hear"></span></p>
+
+  <div class="stampzone" id="d-stampwrap">
+    <button type="button" class="btn primary wide" id="d-stamp" data-t="stampIt"></button>
+    <div id="d-stamped" hidden>
+      <div class="visa-stamp" aria-hidden="true"><div class="vn" id="d-visa-name"></div><div class="vd" id="d-visa-date"></div></div>
+      <p class="msg" id="d-stamped-text"></p>
+      <button type="button" class="linkbtn" id="d-unstamp" data-t="unstamp"></button>
+    </div>
+  </div>
+
+  <p class="foot" data-t="madeLive"></p>
+  <p class="foot" data-t="silentHint"></p>
+  <p class="foot" data-t="privacy"></p>
+</main>
+<script src="../../i18n.js?v=e27ee6a1"></script>
+<script src="../../dest.js?v=e27ee6a1"></script>
+<script src="../../ambient.js?v=e27ee6a1"></script>
+<script src="../../place.js?v=e27ee6a1"></script>
+</body>
+</html>
