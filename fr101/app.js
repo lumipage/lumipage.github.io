@@ -146,7 +146,7 @@
     });
   }
 
-  fetch("../models/" + LANG + ".json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (m) {
+  fetch("../models/" + LANG + ".json").then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (m) {
     M = m;
     u = M.unitsPerEm / 1000;
     var hi = -1e9, lo = 1e9, wide = 0;
@@ -160,6 +160,6 @@
     order = all.split("").filter(function (c) { return M.glyphs[c]; });
     chips($("#lower"), LOW); chips($("#upper"), UP); chips($("#digits"), "0123456789");
     var h = decodeURIComponent(location.hash.slice(1)); cur = Math.max(0, order.indexOf(h));
-    $("#app").hidden = false; draw(order[cur]);
-  }).catch(function () { $("#soon").hidden = false; });
+    $("#loading").hidden = true; $("#app").hidden = false; draw(order[cur]);
+  }).catch(function () { $("#loading").hidden = true; $("#soon").hidden = false; });
 })();

@@ -306,7 +306,7 @@
 
   // ---------- démarrage ----------
   show(location.hash === "#timer" ? "timer" : "sudoku");
-  fetch("../data/daily.json", { cache: "no-cache" })
+  fetch("../data/daily.json")
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (d) { window.__daily = d; sudoku.load(d); })
     .catch(function () { sudoku.fail(); });

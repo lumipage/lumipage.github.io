@@ -212,3 +212,8 @@ dialog .row { margin-top: 14px; }
 .dlist li.on .nm { color: var(--visa); font-weight: 700; }
 
 @media (prefers-reduced-motion: reduce) { .anim .visa-stamp { animation: none; } }
+
+/* très petits écrans (320 à 360 px) : onglets sur 2 lignes au plus */
+@media (max-width: 360px) {
+  .tabs button, .tabs a { font-size: 14px; padding-left: 4px; padding-right: 4px; }
+}

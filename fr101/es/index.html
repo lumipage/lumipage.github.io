@@ -7,10 +7,12 @@
 <meta name="theme-color" content="#FBFAF4">
 <link rel="icon" href="data:,">
 <title>FR-101</title>
-<link rel="stylesheet" href="../app.css?v=3d6c594f">
+<link rel="preload" href="../models/es.json" as="fetch" type="application/json" crossorigin>
+<link rel="stylesheet" href="../app.css?v=a9e94e69">
 </head>
 <body>
 <main class="wrap">
+  <p class="loading" id="loading" aria-hidden="true"><span></span><span></span><span></span></p>
   <p class="soon" id="soon" data-t="soon" hidden></p>
   <div id="app" hidden>
     <h1 data-t="title"></h1>
@@ -34,8 +36,8 @@
     <p class="parents" data-t="parents"></p>
   </div>
 </main>
-<script src="../i18n.js?v=3d6c594f"></script>
+<script src="../i18n.js?v=a9e94e69"></script>
 <script>document.querySelectorAll("[data-t-aria]").forEach(function(b){var T=window.I18N[document.documentElement.lang]||window.I18N.fr;b.setAttribute("aria-label",T[b.getAttribute("data-t-aria")]);});</script>
-<script src="../app.js?v=3d6c594f"></script>
+<script src="../app.js?v=a9e94e69"></script>
 </body>
 </html>
